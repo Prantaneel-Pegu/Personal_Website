@@ -2,11 +2,11 @@
 import Layout from '~/layouts/Layout.astro';
 import Header from '~/components/widgets/Header.astro';
 import Footer from '~/components/widgets/Footer.astro';
-import Announcement from '~/components/widgets/Announcement.astro';
 
 import { headerData, footerData } from '~/navigation';
 
 import type { MetaData } from '~/types';
+import { getBlogPermalink } from '~/utils/permalinks';
 
 export interface Props {
   metadata?: MetaData;
@@ -16,11 +16,20 @@ const { metadata } = Astro.props;
 ---
 
 <Layout metadata={metadata}>
-  <slot name="announcement">
-    <Announcement />
-  </slot>
   <slot name="header">
-    <Header {...headerData} isSticky showRssFeed showToggleTheme />
+    <Header
+      {...headerData}
+      isSticky
+      showRssFeed
+      showToggleTheme
+      links={[
+        { text: 'Home', href: '../#' },
+        { text: 'About', href: '../#about' },
+        { text: 'Resume', href: '../#resume' },
+        { text: 'Projects', href: '../#portfolio' },
+        { text: 'Blog', href: getBlogPermalink() },
+      ]}
+    />
   </slot>
   <main>
     <slot />
