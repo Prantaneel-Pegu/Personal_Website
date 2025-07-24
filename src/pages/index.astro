@@ -61,26 +61,26 @@ const metadata = {
     columns={3}
     items={[
       {
-        icon: 'tabler:brand-dribbble',
+        icon: 'tabler:brand-linkedin',
         callToAction: {
           target: '_blank',
-          text: 'Dribbble',
+          text: 'LinkedIn',
           href: '#',
         },
       },
       {
-        icon: 'tabler:brand-behance',
+        icon: 'tabler:brand-x',
         callToAction: {
           target: '_blank',
-          text: 'Behance',
+          text: 'X.com',
           href: '#',
         },
       },
       {
-        icon: 'tabler:brand-pinterest',
+        icon: 'tabler:brand-github',
         callToAction: {
           target: '_blank',
-          text: 'Pinterest',
+          text: 'Github',
           href: '#',
         },
       },
@@ -94,16 +94,16 @@ const metadata = {
     <Fragment slot="content">
       <h2 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">About me</h2>
       <p>
-        Welcome to my creative journey. My work is a testament to my commitment to bringing ideas to life, where each
-        pixel becomes a brushstroke in the canvas of imagination.
+        Hi! I'm a developer who loves turning ideas into functional and pleasing digital experiences. I enjoy designing
+        beautiful websites just as much as I appreciate visiting them.
       </p>
       <br />
       <p>
-        I find inspiration in the world around me, whether through the pages of a captivating novel, the intricate
-        details of typography, or the vibrant hues of nature during my outdoor escapades.
+        While I specialize in web development, I am genuinely passionate about computer science in general. What
+        fascinates me is its endless depth and diversity — I just love how beautifully complex it is.
       </p>
       <br />
-      <p>If you're curious to dive deeper into my work, you can follow me:</p>
+      <p>If you're curious to learn more about me, you can follow me here:</p>
     </Fragment>
 
     <Fragment slot="bg">
@@ -119,23 +119,29 @@ const metadata = {
     items={[
       {
         title:
-          'Graphic Designer <br /> <span class="font-normal">ABC Design Studio, New York, NY</span> <br /> <span class="text-sm font-normal">2021 - Present</span>',
-        description: `Collaborate with clients to understand design requirements and objectives. <br /> Develop branding solutions, including logos, color palettes, and brand guidelines. <br /> Design marketing materials such as brochures, posters, and digital assets. <br /> Create visually appealing user interfaces for websites and applications.`,
+          'Lead Developer <br /> <span class="font-normal">Mising Autonomous Council, Dibrugarh, Assam</span> <br /> <span class="text-sm font-normal">2021 - Present</span>',
+        description: `Developed the official website for the Mising Autonomous Council (MAC), a local government body focused on the welfare and development of the Mising tribal community. Designed and built the site independently, focusing on performance, accessibility, and user-friendliness. `,
         icon: 'tabler:briefcase',
       },
       {
         title:
-          'Junior Graphic Designer <br /> <span class="font-normal">XYZ Creative Agency, Los Angeles, CA</span> <br /> <span class="text-sm font-normal">2018 - 2021</span>',
-        description: `Assisted senior designers in creating design concepts and visual assets. <br /> Contributed to the development of brand identities and marketing collateral. <br /> Collaborated with the marketing team to ensure consistent design across campaigns. <br /> Gained hands-on experience in various design software and tools.`,
+          'Contract Developer <br /> <span class="font-normal">Siyang Sisang, Jorhat, Assam</span> <br /> <span class="text-sm font-normal">2018 - 2021</span>',
+        description: `At Siyang Sisang, an organization dedicated to preserving and promoting local culture and music, I led the end-to-end development of their official website to improve their digital outreach and boost event promotion.`,
+        icon: 'tabler:briefcase',
+      },
+      {
+        title:
+          'Contract Developer <br /> <span class="font-normal">Donyi Destinations, Guwahati, Assam</span> <br /> <span class="text-sm font-normal">2018 - 2021</span>',
+        description: `Developed the official website for Donyi Destinations, an eco-travel agency dedicated to sustainable tourism in Northeast India.`,
         icon: 'tabler:briefcase',
       },
     ]}
     classes={{ container: 'max-w-3xl' }}
   />
 
-  <!-- Steps Widget ****************** -->
+  <!-- Steps Widget (Education) ****************** -->
 
-  <Steps
+  <!-- <Steps
     id="resume"
     title="Education"
     items={[
@@ -149,7 +155,7 @@ const metadata = {
       },
     ]}
     classes={{ container: 'max-w-3xl' }}
-  />
+  /> -->
 
   <!-- Features3 Widget ************** -->
 
@@ -316,7 +322,7 @@ const metadata = {
 
   <!-- Testimonials Widget *********** -->
 
-  <Testimonials
+  <!-- <Testimonials
     title="Client testimonials"
     subtitle="Discover what clients have to say about their experiences working with me."
     testimonials={[
@@ -347,35 +353,8 @@ const metadata = {
           alt: 'Laura Simmons Image',
         },
       },
-      {
-        testimonial: `We entrusted Sarah with revamping our website's user interface, and the results were astounding. Her intuitive design sense enhanced user experience, leading to a significant increase in engagement. She's a designer who truly understands the synergy of aesthetics and functionality.`,
-        name: 'Alex Foster',
-        job: 'Director of web services',
-        image: {
-          src: 'https://images.unsplash.com/photo-1599566150163-29194dcaad36?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
-          alt: 'Alex Foster Image',
-        },
-      },
-      {
-        testimonial: `She took our vision and elevated it beyond imagination. Her ability to capture brand essence and translate it into design is nothing short of remarkable. Working with her has been an inspiring journey.`,
-        name: 'Jessica Collins',
-        job: 'Product Manager',
-        image: {
-          src: 'https://images.unsplash.com/photo-1548142813-c348350df52b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=778&q=80',
-          alt: 'Jessica Collins Image',
-        },
-      },
-      {
-        testimonial: `Her ability to transform concepts into captivating visuals is nothing short of extraordinary. She took our event poster idea and turned it into a visual masterpiece that perfectly captured the essence of our festival. Sarah's dedication, creativity, and knack for delivering beyond expectations make her an invaluable asset to any project.`,
-        name: 'Michael Carter',
-        job: 'Event Coordinator',
-        image: {
-          src: 'https://images.unsplash.com/photo-1566492031773-4f4e44671857?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
-          alt: 'Michael Carter Image',
-        },
-      },
     ]}
-  />
+  /> -->
 
   <!-- CallToAction Widget *********** -->
 

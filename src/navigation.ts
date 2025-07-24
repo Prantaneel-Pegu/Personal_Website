@@ -32,15 +32,15 @@ export const headerData = {
 };
 
 export const footerData = {
-  links: [
-    {
-      title: 'Reach me at',
-      links: [
-        { text: '+91 9864 700 665', href: 'tel:+919864700665' },
-        { text: 'contact@prantaneelpegu.com', href: 'mailto:contact@prantaneelpegu.com' },
-      ],
-    },
-  ],
+  //   links: [
+  //     {
+  //       title: 'Reach me at',
+  //       links: [
+  //         { text: '+91 9864 700 665', href: 'tel:+919864700665' },
+  //         { text: 'contact@prantaneelpegu.com', href: 'mailto:contact@prantaneelpegu.com' },
+  //       ],
+  //     },
+  //   ],
   secondaryLinks: [],
   socialLinks: [
     { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/Prantaneel-Pegu' },
