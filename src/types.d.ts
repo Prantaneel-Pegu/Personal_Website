@@ -268,6 +268,26 @@ export interface Steps extends Omit<Headline, 'classes'>, Widget {
   isReversed?: boolean;
 }
 
+export interface Employment {
+  title?: {
+    role: string;
+    company: string;
+    duration: string;
+  };
+  description?: string;
+  icon?: string;
+  classes?: Record<string, string>;
+  callToAction?: CallToAction;
+  image?: Image;
+}
+
+export interface StepsEmployment extends Omit<Headline, 'classes'>, Widget {
+  items?: Array<Employment>;
+  callToAction?: string | CallToAction;
+  image?: string | Image;
+  isReversed?: boolean;
+}
+
 export interface Content extends Omit<Headline, 'classes'>, Widget {
   content?: string;
   image?: string | unknown;

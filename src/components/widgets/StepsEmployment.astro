@@ -1,9 +1,9 @@
 ---
 import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
-import Timeline from '~/components/ui/Timeline.astro';
 import Headline from '~/components/ui/Headline.astro';
 import Image from '~/components/common/Image.astro';
-import type { Steps as Props } from '~/types';
+import type { StepsEmployment as Props } from '~/types';
+import TimelineEmployment from '../ui/TimelineEmployment.astro';
 
 const {
   title = await Astro.slots.render('title'),
@@ -12,6 +12,7 @@ const {
   items = [],
   image = await Astro.slots.render('image'),
   isReversed = false,
+
   id,
   isDark = false,
   classes = {},
@@ -32,7 +33,7 @@ const {
           ...((classes?.headline as object) ?? {}),
         }}
       />
-      <Timeline items={items} classes={classes?.items as Record<string, never>} />
+      <TimelineEmployment items={items} classes={classes?.items as Record<string, never>} />
     </div>
     {
       image && (
