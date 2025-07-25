@@ -299,3 +299,19 @@ export interface Content extends Omit<Headline, 'classes'>, Widget {
 }
 
 export interface Contact extends Omit<Headline, 'classes'>, Form, Widget {}
+
+// export interface FeaturesSkillsItem {
+//   title?: string;
+//   description?: string;
+//   icon?: Astro.JSX.Element;
+//   classes?: Record<string, string>;
+//   callToAction?: CallToAction;
+//   image?: Image;
+// }
+
+// export interface ItemGridSkills {
+//   items?: Array<FeaturesSkillsItem>;
+//   columns?: number;
+//   defaultIcon?: string;
+//   classes?: Record<string, string>;
+// }

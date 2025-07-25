@@ -4,12 +4,12 @@ import Header from '~/components/widgets/Header.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import Content from '~/components/widgets/Content.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
-import Features3 from '~/components/widgets/Features3.astro';
 // import Testimonials from '~/components/widgets/Testimonials.astro';
 import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 import { getBlogPermalink, getPermalink } from '~/utils/permalinks';
 import MyPhoto from '~/../public/my-photo-long.jpg';
 import StepsEmployment from '~/components/widgets/StepsEmployment.astro';
+import FeaturesSkills from '~/components/widgets/FeaturesSkills.astro';
 
 const metadata = {
   title: 'Prantaneel Pegu',
@@ -178,59 +178,23 @@ const metadata = {
     classes={{ container: 'max-w-3xl' }}
   /> -->
 
-  <!-- Features3 Widget ************** -->
+  <!-- Skills Widget ************** -->
 
-  <Features3
+  <!-- Note: Skill items moved into the component to keep this file tidy -->
+
+  <FeaturesSkills
     title="Skills"
-    subtitle="Discover the proficiencies that allow me to bring imagination to life through design."
-    columns={3}
+    subtitle="These are the technologies that power my work."
+    columns={4}
     defaultIcon="tabler:point-filled"
-    items={[
-      {
-        title: 'Graphic design',
-        description: 'Proficient in crafting visually appealing designs that convey messages effectively.',
-      },
-      {
-        title: 'Branding and identity',
-        description: 'Skilled at developing cohesive brand identities, including logos and brand guidelines.',
-      },
-      {
-        title: 'User-centered design',
-        description: 'Experienced in creating user-friendly interfaces and optimizing user experiences.',
-      },
-      {
-        title: 'Adobe Creative Suite',
-        description: 'Skilled in using Photoshop, Illustrator, and InDesign to create and edit visual elements.',
-      },
-      {
-        title: 'Typography',
-        description: 'Adept in selecting and manipulating typefaces to enhance design aesthetics.',
-      },
-      {
-        title: 'Color theory',
-        description: 'Proficient in using color to evoke emotions and enhance visual harmony.',
-      },
-      {
-        title: 'Print and digital design',
-        description: 'Knowledgeable in designing for both print materials and digital platforms.',
-      },
-      {
-        title: 'Attention to detail',
-        description: 'Diligent in maintaining precision and quality in all design work.',
-      },
-      {
-        title: 'Adaptability',
-        description: 'Quick to adapt to new design trends, technologies, and client preferences.',
-      },
-    ]}
   />
 
   <!-- Content Widget **************** -->
 
   <Content
     id="portfolio"
-    title="Elevating visual narratives"
-    subtitle="Embark on a design journey that surpasses pixels, entering a realm of imagination. Explore my portfolio, where passion and creativity converge to shape enthralling visual narratives."
+    title="My Projects"
+    subtitle="These projects are a mix of things I’ve made while learning and exploring. Each one has taught me something new. They’re not perfect, but they’re real and they work. I’ve put a lot of thought and effort into each one."
     isReversed
     items={[
       {
@@ -295,7 +259,7 @@ const metadata = {
   >
     <Fragment slot="content">
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        Project 2: <br /><span class="text-2xl">Event poster for art & music festival</span>
+        Project 2: <br /><span class="text-2xl">NASA Space Gallery</span>
       </h3>
     </Fragment>
 
@@ -358,8 +322,8 @@ const metadata = {
 
   <BlogLatestPosts
     id="blog"
-    title="Explore my insightful articles on my blog"
-    information={`Dive into a realm of design wisdom and creative inspiration, where you'll find invaluable insights, practical tips, and captivating narratives that elevate and enrich your creative journey.`}
+    title="Explore my blog for some honest insights."
+    information={`I write about things I’m learning, building, or just thinking through. It’s a mix of code, design, and the occasional deep dive. Nothing fancy, just jotting down bits that interest me.`}
   >
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
