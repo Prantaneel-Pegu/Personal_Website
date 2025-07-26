@@ -1,7 +1,7 @@
 {
   "name": "personal_website",
   "version": "1.0.0",
-  "description": "Prantaneel Pegu's Personal Website",
+  "description": "Prantaneel Pegu's Portfolio Website",
   "type": "module",
   "private": true,
   "engines": {
