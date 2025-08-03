@@ -7,48 +7,54 @@ import 'devicon';
 const { items = [], columns, defaultIcon = '', classes = {} } = Astro.props;
 
 const {
-  container: containerClass = '',
-  panel: panelClass = '',
-  title: titleClass = '',
-  icon: defaultIconClass = 'text-primary',
+    container: containerClass = '',
+    panel: panelClass = '',
+    title: titleClass = '',
+    icon: defaultIconClass = 'text-primary',
 } = classes;
 ---
 
 {
-  items && items.length > 0 && (
-    <div
-      class={twMerge(
-        `grid relative left-10 max-w-[1204px] mx-auto gap-8 md:gap-y-12 ${
-          columns === 4
-            ? 'lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2'
-            : columns === 3
-              ? 'lg:grid-cols-3 sm:grid-cols-2'
-              : columns === 2
-                ? 'sm:grid-cols-2 '
-                : ''
-        }`,
-        containerClass
-      )}
-    >
-      {items.map(({ title, icon, classes: itemClasses = {} }) => (
-        <div class="intersect-once motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade ">
-          <div class={twMerge('flex flex-row max-w-md gap-8 items-center ', panelClass, itemClasses?.panel)}>
-            <div class="flex justify-center">
-              {icon ? (
-                <div set:html={icon.replace('<svg', `<svg class="size-16"`)} />
-              ) : (
-                <Icon
-                  name={defaultIcon}
-                  class={twMerge('w-7 h-7 mr-2 rtl:mr-0 rtl:ml-2', defaultIconClass, itemClasses?.icon)}
-                />
-              )}
-            </div>
-            <div class="mt-0.5">
-              {title && <h3 class={twMerge('text-xl font-bold', titleClass, itemClasses?.title)}>{title}</h3>}
-            </div>
-          </div>
+    items && items.length > 0 && (
+        <div
+            class={twMerge(
+                `grid overflow-clip relative left-10 max-w-[1204px] mx-auto gap-8 md:gap-y-12 ${
+                    columns === 4
+                        ? 'lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2'
+                        : columns === 3
+                          ? 'lg:grid-cols-3 sm:grid-cols-2'
+                          : columns === 2
+                            ? 'sm:grid-cols-2 '
+                            : ''
+                }`,
+                containerClass
+            )}
+        >
+            {items.map(({ title, icon, classes: itemClasses = {} }) => (
+                <div class="intersect-once motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade">
+                    <div class={twMerge('flex flex-row max-w-md gap-8 items-center ', panelClass, itemClasses?.panel)}>
+                        <div class="flex justify-center">
+                            {icon ? (
+                                <div set:html={icon.replace('<svg', `<svg class="size-16"`)} />
+                            ) : (
+                                <Icon
+                                    name={defaultIcon}
+                                    class={twMerge(
+                                        'w-7 h-7 mr-2 rtl:mr-0 rtl:ml-2',
+                                        defaultIconClass,
+                                        itemClasses?.icon
+                                    )}
+                                />
+                            )}
+                        </div>
+                        <div class="mt-0.5">
+                            {title && (
+                                <h3 class={twMerge('text-xl font-bold', titleClass, itemClasses?.title)}>{title}</h3>
+                            )}
+                        </div>
+                    </div>
+                </div>
+            ))}
         </div>
-      ))}
-    </div>
-  )
+    )
 }

@@ -10,161 +10,161 @@ import { getBlogPermalink, getPermalink } from '~/utils/permalinks';
 import MyPhoto from '~/assets/images/my-photo-long.jpg';
 import StepsEmployment from '~/components/widgets/StepsEmployment.astro';
 import FeaturesSkills from '~/components/widgets/FeaturesSkills.astro';
-import ProjectImage1 from '~/assets/images/nasa-space-gallery-homepage.png';
-import ProjectImage2 from '~/assets/images/snackhub-homepage.png';
+import ProjectImage1 from '~/assets/images/snackhub-showcase.png';
+import ProjectImage2 from '~/assets/images/nsg-showcase.png';
 
 const metadata = {
-  title: 'Prantaneel Pegu',
+    title: 'Prantaneel Pegu',
 };
 ---
 
 <Layout metadata={metadata}>
-  <Fragment slot="announcement"></Fragment>
-  <Fragment slot="header">
-    <Header
-      links={[
-        { text: 'Home', href: '#' },
-        { text: 'About', href: '#about' },
-        { text: 'Resume', href: '#resume' },
-        { text: 'Projects', href: '#portfolio' },
-        { text: 'Blog', href: getBlogPermalink() },
-      ]}
-      actions={[
-        {
-          text: 'Contact me',
-          href: 'contact',
-        },
-      ]}
-      isSticky
-      showRssFeed
-      showToggleTheme
+    <Fragment slot="announcement"></Fragment>
+    <Fragment slot="header">
+        <Header
+            links={[
+                { text: 'Home', href: '#' },
+                { text: 'About', href: '#about' },
+                { text: 'Resume', href: '#resume' },
+                { text: 'Projects', href: '#portfolio' },
+                { text: 'Blog', href: getBlogPermalink() },
+            ]}
+            actions={[
+                {
+                    text: 'Contact me',
+                    href: 'contact',
+                },
+            ]}
+            isSticky
+            showRssFeed
+            showToggleTheme
+        />
+    </Fragment>
+
+    <!-- Hero2 Widget ******************* -->
+
+    <Hero
+        id="hero"
+        title="Prantaneel Pegu"
+        tagline="Hi! I am"
+        actions={[{ variant: 'primary', text: "Let's talk", href: getPermalink('/contact#form') }]}
+    >
+        <Fragment slot="subtitle">
+            I'm a full-stack web developer with a strong focus on intuitive and user-friendly design. I have built fast,
+            accessible, and scalable web applications for multiple businesses and have experience working with a wide
+            variety of tools.
+        </Fragment>
+    </Hero>
+
+    <!-- Content Widget **************** -->
+
+    <Content
+        id="about"
+        columns={3}
+        items={[
+            {
+                icon: 'tabler:brand-linkedin',
+                callToAction: {
+                    target: '_blank',
+                    text: 'LinkedIn',
+                    href: 'https://www.linkedin.com/in/prantaneel-pegu/',
+                },
+            },
+            {
+                icon: 'tabler:brand-x',
+                callToAction: {
+                    target: '_blank',
+                    text: 'X.com',
+                    href: 'https://x.com/PrantaneelPegu',
+                },
+            },
+            {
+                icon: 'tabler:brand-github',
+                callToAction: {
+                    target: '_blank',
+                    text: 'Github',
+                    href: 'https://github.com/Prantaneel-Pegu',
+                },
+            },
+        ]}
+        image={{
+            src: MyPhoto,
+            alt: 'A photo of me',
+            loading: 'eager',
+        }}
+    >
+        <Fragment slot="content">
+            <h2 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">About me</h2>
+            <p>
+                Hi! I'm a developer who loves turning ideas into functional and pleasing digital experiences. I enjoy
+                designing beautiful websites just as much as I appreciate visiting them.
+            </p>
+            <br />
+            <p>
+                While I specialize in web development, I am genuinely passionate about computer science as a whole. What
+                fascinates me is its endless depth and diversity — I just love how beautifully complex it is.
+            </p>
+            <br />
+            <p>If you're curious to learn more about me, you can follow me here:</p>
+        </Fragment>
+
+        <Fragment slot="bg">
+            <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+        </Fragment>
+    </Content>
+
+    <!-- Steps Widget ****************** -->
+
+    <StepsEmployment
+        id="resume"
+        title="Work experience"
+        items={[
+            {
+                title: {
+                    role: 'Lead Developer',
+                    company: 'Mising Autonomous Council',
+                    duration: 'Dec 2024 - Present',
+                },
+                description: `Currently developing the official website for the Mising Autonomous Council (MAC), a local government body focused on the welfare and development of the Mising tribal community. Designed and built the site independently, focusing on performance, accessibility, and user-friendliness. `,
+                icon: 'tabler:briefcase',
+            },
+            {
+                title: {
+                    role: 'Contract Developer',
+                    company: 'Siyang Sisang',
+                    duration: 'Jul 2024 - Dec 2024',
+                },
+                callToAction: {
+                    target: '_blank',
+                    text: 'Visit the website',
+                    icon: 'tabler:chevron-right',
+                    href: 'https://siyangsisang.com',
+                },
+                description: `At Siyang Sisang, an organization dedicated to preserving and promoting local culture and music, I led the end-to-end development of their official website to improve their digital outreach and boost event promotion.`,
+                icon: 'tabler:briefcase',
+            },
+            {
+                title: {
+                    role: 'Contract Developer',
+                    company: 'Donyi Destinations',
+                    duration: 'Jan 2024 - Jul 2024',
+                },
+                callToAction: {
+                    target: '_blank',
+                    text: 'Visit the website',
+                    icon: 'tabler:chevron-right',
+                    href: 'https://www.donyi-destinations.in',
+                },
+                description: `Developed the official website for Donyi Destinations, an eco-travel agency dedicated to sustainable tourism in Northeast India.`,
+                icon: 'tabler:briefcase',
+            },
+        ]}
+        classes={{ container: 'max-w-3xl' }}
     />
-  </Fragment>
 
-  <!-- Hero2 Widget ******************* -->
+    <!-- Steps Widget (Education) ****************** -->
 
-  <Hero
-    id="hero"
-    title="Prantaneel Pegu"
-    tagline="Hi! I am"
-    actions={[{ variant: 'primary', text: "Let's talk", href: getPermalink('/contact#form') }]}
-  >
-    <Fragment slot="subtitle">
-      I'm a full-stack web developer with a strong focus on intuitive and user-friendly design. I have built fast,
-      accessible, and scalable web applications for multiple businesses and have experience working with a wide variety
-      of tools.
-    </Fragment>
-  </Hero>
-
-  <!-- Content Widget **************** -->
-
-  <Content
-    id="about"
-    columns={3}
-    items={[
-      {
-        icon: 'tabler:brand-linkedin',
-        callToAction: {
-          target: '_blank',
-          text: 'LinkedIn',
-          href: 'https://www.linkedin.com/in/prantaneel-pegu/',
-        },
-      },
-      {
-        icon: 'tabler:brand-x',
-        callToAction: {
-          target: '_blank',
-          text: 'X.com',
-          href: 'https://x.com/PrantaneelPegu',
-        },
-      },
-      {
-        icon: 'tabler:brand-github',
-        callToAction: {
-          target: '_blank',
-          text: 'Github',
-          href: 'https://github.com/Prantaneel-Pegu',
-        },
-      },
-    ]}
-    image={{
-      src: MyPhoto,
-      alt: 'A photo of me',
-      loading: 'eager',
-    }}
-  >
-    <Fragment slot="content">
-      <h2 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">About me</h2>
-      <p>
-        Hi! I'm a developer who loves turning ideas into functional and pleasing digital experiences. I enjoy designing
-        beautiful websites just as much as I appreciate visiting them.
-      </p>
-      <br />
-      <p>
-        While I specialize in web development, I am genuinely passionate about computer science as a whole. What
-        fascinates me is its endless depth and diversity — I just love how beautifully complex it is.
-      </p>
-      <br />
-      <p>If you're curious to learn more about me, you can follow me here:</p>
-    </Fragment>
-
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content>
-
-  <!-- Steps Widget ****************** -->
-
-  <StepsEmployment
-    id="resume"
-    title="Work experience"
-    items={[
-      {
-        title: {
-          role: 'Lead Developer',
-          company: 'Mising Autonomous Council',
-          duration: 'Dec 2024 - Present',
-        },
-        description: `Currently developing the official website for the Mising Autonomous Council (MAC), a local government body focused on the welfare and development of the Mising tribal community. Designed and built the site independently, focusing on performance, accessibility, and user-friendliness. `,
-        icon: 'tabler:briefcase',
-      },
-      {
-        title: {
-          role: 'Contract Developer',
-          company: 'Siyang Sisang',
-          duration: 'Jul 2024 - Dec 2024',
-        },
-        callToAction: {
-          target: '_blank',
-          text: 'Visit the website',
-          icon: 'tabler:chevron-right',
-          href: 'https://siyangsisang.com',
-        },
-        description: `At Siyang Sisang, an organization dedicated to preserving and promoting local culture and music, I led the end-to-end development of their official website to improve their digital outreach and boost event promotion.`,
-        icon: 'tabler:briefcase',
-      },
-      {
-        title: {
-          role: 'Contract Developer',
-          company: 'Donyi Destinations',
-          duration: 'Jan 2024 - Jul 2024',
-        },
-        callToAction: {
-          target: '_blank',
-          text: 'Visit the website',
-          icon: 'tabler:chevron-right',
-          href: 'https://www.donyi-destinations.in',
-        },
-        description: `Developed the official website for Donyi Destinations, an eco-travel agency dedicated to sustainable tourism in Northeast India.`,
-        icon: 'tabler:briefcase',
-      },
-    ]}
-    classes={{ container: 'max-w-3xl' }}
-  />
-
-  <!-- Steps Widget (Education) ****************** -->
-
-  <!-- <Steps
+    <!-- <Steps
     id="resume"
     title="Education"
     items={[
@@ -180,99 +180,103 @@ const metadata = {
     classes={{ container: 'max-w-3xl' }}
   /> -->
 
-  <!-- Skills Widget ************** -->
+    <!-- Skills Widget ************** -->
 
-  <!-- Note: Skill items moved into the component to keep this file tidy -->
+    <!-- Note: Skill items moved into the component to keep this file tidy -->
 
-  <FeaturesSkills
-    title="Skills"
-    subtitle="These are the technologies that power my work."
-    columns={4}
-    defaultIcon="tabler:point-filled"
-  />
+    <FeaturesSkills
+        title="Skills"
+        subtitle="These are the technologies that power my work."
+        columns={4}
+        defaultIcon="tabler:point-filled"
+    />
 
-  <!-- Content Widget **************** -->
+    <!-- Content Widget **************** -->
 
-  <Content
-    id="portfolio"
-    title="My Projects"
-    subtitle="These projects are a mix of things I’ve made while learning and exploring. Each one has taught me something new. They’re not perfect, but they’re real and they work. I’ve put a lot of thought and effort into each one."
-    isReversed
-    items={[
-      {
-        title: 'Description:',
-        description:
-          "This project is a website for a fictional restaurant called 'Snackhub'. Built with WordPress, PHP, JavaScript and CSS, it uses custom themes, custom post types and custom forms to fully tailor the website design. It was developed with performance in mind and boasts high functionality, clear-cut designs and ease of use.",
-      },
-      {
-        title: 'Role:',
-        description:
-          'Led the entire branding process from concept to execution. Created a dynamic logo that symbolized innovation, selected a vibrant color palette, and I designed corporate stationery, website graphics, and social media assets.',
-      },
-    ]}
-    image={{
-      src: ProjectImage1,
-      alt: 'Tech Design Image',
-    }}
-    callToAction={{
-      target: '_blank',
-      text: 'Go to the project',
-      icon: 'tabler:chevron-right',
-      href: 'https://projects.prantaneelpegu.com/snackhub',
-    }}
-  >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        Project 1: <br /><span class="text-2xl">Snackhub - Your Premier Food Destination</span>
-      </h3>
-    </Fragment>
+    <Content
+        id="portfolio"
+        title="My Projects"
+        subtitle="These projects are a mix of things I’ve made while learning and exploring. Each one has taught me something new. They’re not perfect, but they’re real and they work. I’ve put a lot of thought and effort into each one."
+        isReversed
+        items={[
+            {
+                title: 'Description:',
+                description:
+                    'Snackhub is a fictional restaurant website developed with WordPress, PHP, JavaScript, and CSS. It features a custom theme, tailored post types, and custom form handling. It was developed with performance in mind and boasts high functionality, clear-cut design and ease of use.',
+                icon: 'tabler:file-description-filled',
+            },
+            {
+                title: 'Features:',
+                description:
+                    'The site includes richly populated pages with realistic filler content. It features a search bar, a modern food menu with detailed pages for each food item (built using custom post types), category-based searching and more. It relies on minimal plugins and uses various caching techniques, resulting in fast load times. It is easily navigable and fully responsive on all devices.',
+                icon: 'tabler:star-filled',
+            },
+        ]}
+        image={{
+            src: ProjectImage1,
+            alt: 'Snackhub Collage',
+        }}
+        callToAction={{
+            target: '_blank',
+            text: 'Go to the project',
+            icon: 'tabler:chevron-right',
+            href: 'https://projects.prantaneelpegu.com/snackhub',
+        }}
+    >
+        <Fragment slot="content">
+            <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+                Project 1: <br /><span class="text-2xl">Snackhub - Your Premier Food Destination</span>
+            </h3>
+        </Fragment>
 
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content>
+        <Fragment slot="bg">
+            <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+        </Fragment>
+    </Content>
 
-  <!-- Content Widget **************** -->
+    <!-- Content Widget **************** -->
 
-  <Content
-    isReversed
-    isAfterContent={true}
-    items={[
-      {
-        title: 'Description:',
-        description:
-          'This full-stack project is a React.js webapp running on an Express.js server, that queries and fetches astronomical data by using various NASA and Google APIs.',
-      },
-      {
-        title: 'Role:',
-        description: `Translated the festival's creative theme into a visually striking poster. Used bold typography, vibrant colors, and abstract elements to depict the fusion of art and music. Ensured the design captured the festival's vibrant atmosphere.`,
-      },
-    ]}
-    image={{
-      src: ProjectImage2,
-      alt: 'Art and Music oster Image',
-    }}
-    callToAction={{
-      target: '_blank',
-      text: 'Go to the project',
-      icon: 'tabler:chevron-right',
-      href: 'https://projects.prantaneelpegu.com/nasa-space-gallery',
-    }}
-  >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        Project 2: <br /><span class="text-2xl">NASA Space Gallery</span>
-      </h3>
-    </Fragment>
+    <Content
+        isReversed
+        isAfterContent={true}
+        items={[
+            {
+                title: 'Description:',
+                description:
+                    'The NASA Space Gallery is a full-stack web app powered by React.js and Express.js, designed to collect and present astronomical data through various NASA and Google APIs. It offers an interactive gallery, various image collections, and even its own API. This was my first full-stack project, and while it may be a little rough on the design, its functionality has been thoroughly tested',
+                icon: 'tabler:file-description-filled',
+            },
+            {
+                title: 'Features:',
+                description: `The app supports search-based queries and features a vast gallery, personalized picture recommendations, a Picture of the Day (POTD) service, coordinate-based satellite imagery, and Mars Rover image sets. It also offers a customizable API with robust documentation.`,
+                icon: 'tabler:star-filled',
+            },
+        ]}
+        image={{
+            src: ProjectImage2,
+            alt: 'Nasa Space Gallery Collage',
+        }}
+        callToAction={{
+            target: '_blank',
+            text: 'Go to the project',
+            icon: 'tabler:chevron-right',
+            href: 'https://projects.prantaneelpegu.com/nasa-space-gallery',
+        }}
+    >
+        <Fragment slot="content">
+            <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+                Project 2: <br /><span class="text-2xl">NASA Space Gallery</span>
+            </h3>
+        </Fragment>
 
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content>
+        <Fragment slot="bg">
+            <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+        </Fragment>
+    </Content>
 
-  <!-- Testimonials Widget *********** -->
+    <!-- Testimonials Widget *********** -->
 
-  <!-- <Testimonials
+    <!-- <Testimonials
     title="Client testimonials"
     subtitle="Discover what clients have to say about their experiences working with me."
     testimonials={[
@@ -306,29 +310,29 @@ const metadata = {
     ]}
   /> -->
 
-  <!-- CallToAction Widget *********** -->
+    <!-- CallToAction Widget *********** -->
 
-  <CallToAction
-    title="Let's create together"
-    subtitle="Ready to transform your vision into captivating designs?"
-    actions={[
-      {
-        variant: 'primary',
-        text: 'Hire me',
-        href: getPermalink('/contact#form'),
-      },
-    ]}
-  />
+    <CallToAction
+        title="Let's create together"
+        subtitle="Ready to transform your vision into captivating designs?"
+        actions={[
+            {
+                variant: 'primary',
+                text: 'Hire me',
+                href: getPermalink('/contact#form'),
+            },
+        ]}
+    />
 
-  <!-- BlogLatestPost Widget **************** -->
+    <!-- BlogLatestPost Widget **************** -->
 
-  <BlogLatestPosts
-    id="blog"
-    title="Explore my blog for some honest insights."
-    information={`I write about things I’m learning, building, or just thinking through. It’s a mix of code, design, and the occasional deep dive. Nothing fancy, just jotting down bits that interest me.`}
-  >
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </BlogLatestPosts>
+    <BlogLatestPosts
+        id="blog"
+        title="Explore my blog for some honest insights."
+        information={`I write about things I’m learning, building, or just thinking through. It’s a mix of code, design, and the occasional deep dive. Nothing fancy, just jotting down bits that interest me.`}
+    >
+        <Fragment slot="bg">
+            <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+        </Fragment>
+    </BlogLatestPosts>
 </Layout>
