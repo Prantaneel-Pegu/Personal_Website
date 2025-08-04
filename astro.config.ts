@@ -18,13 +18,15 @@ import { readingTimeRemarkPlugin, responsiveTablesRehypePlugin, lazyImagesRehype
 import node from '@astrojs/node';
 import vercel from '@astrojs/vercel';
 
-const isVercel = !!process.env.VERCEL; // Vercel automatically sets process.env.VERCEL = '1' in its environment.
+const isVercel = process.env.VERCEL === '1'; // Vercel automatically sets process.env.VERCEL = '1' in its environment.
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const hasExternalScripts = false;
 const whenExternalScripts = (items: (() => AstroIntegration) | (() => AstroIntegration)[] = []) =>
     hasExternalScripts ? (Array.isArray(items) ? items.map((item) => item()) : [items()]) : [];
+
+console.log('Using adapter:', process.env.VERCEL ? 'vercel' : 'node');
 
 export default defineConfig({
     output: 'static',
