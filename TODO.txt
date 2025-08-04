@@ -1,3 +1,2 @@
-1. check all links
-2. test on mobile
-3. add icon and og banner
+
+1. test on mobile

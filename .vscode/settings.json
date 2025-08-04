@@ -2,7 +2,8 @@
     "css.customData": ["./vscode.tailwind.json"],
     "eslint.validate": ["javascript", "javascriptreact", "astro", "typescript", "typescriptreact"],
     "files.associations": {
-        "*.mdx": "markdown"
+        "*.mdx": "markdown",
+        "*.css": "tailwindcss"
     },
     "prettier.documentSelectors": ["**/*.astro"],
     "[astro]": {
@@ -11,5 +12,15 @@
     "yaml.schemas": {
         "./.vscode/astrowind/config-schema.json": "/src/config.yaml"
     },
-    "eslint.useFlatConfig": true
+    "eslint.useFlatConfig": true,
+    "tailwindCSS.includeLanguages": {
+        "html": "html",
+        "javascript": "javascript",
+        "css": "css"
+    },
+    "editor.quickSuggestions": {
+        "strings": true
+    },
+    "css.lint.unknownAtRules": "ignore",
+    "workbench.settings.openDefaultSettings": false
 }
