@@ -26,10 +26,8 @@ const hasExternalScripts = false;
 const whenExternalScripts = (items: (() => AstroIntegration) | (() => AstroIntegration)[] = []) =>
     hasExternalScripts ? (Array.isArray(items) ? items.map((item) => item()) : [items()]) : [];
 
-console.log('Using adapter:', process.env.VERCEL ? 'vercel' : 'node');
-
 export default defineConfig({
-    output: 'static',
+    output: 'server',
 
     integrations: [
         tailwind({
@@ -95,5 +93,5 @@ export default defineConfig({
         },
     },
 
-    adapter: vercel(),
+    adapter: vercel(), // isVercel ? vercel() : node({ mode: 'standalone' }),
 });
