@@ -93,5 +93,5 @@ export default defineConfig({
         },
     },
 
-    adapter: vercel(), // isVercel ? vercel() : node({ mode: 'standalone' }),
+    adapter: isVercel ? vercel() : node({ mode: 'standalone' }),
 });
