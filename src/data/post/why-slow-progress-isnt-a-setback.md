@@ -1,15 +1,15 @@
 ---
-publishDate: 2025-07-22
 title: Why Slow Progress Isn’t a Setback
-excerpt: We often chase fast results, but steady, patient progress can be just as — if not more — powerful. Here's why it's okay to move at your own pace.
-image: https://plus.unsplash.com/premium_photo-1661635988518-bbf686a69d39?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+excerpt: We often chase fast results, but steady, patient progress can be just
+  as — if not more — powerful. Here's why it's okay to move at your own pace.
 category: philosophy
 tags:
   - life
+image: https://plus.unsplash.com/premium_photo-1661635988518-bbf686a69d39?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+publishDate: 2025-07-22
 metadata:
   canonical: https://prantaneelpegu.com/why-slow-progress-isnt-a-setback
 ---
-
 ## The Pressure to Hurry
 
 It’s hard not to feel the weight of urgency in tech. Everywhere you look, people are building fast, shipping fast, learning fast. The pressure to keep up can feel overwhelming: it feels like you’ll be left behind if you’re not constantly sprinting. But truthfully? Most meaningful progress isn’t made at lightning speed. It happens in slow, quiet steps that build up over time.
