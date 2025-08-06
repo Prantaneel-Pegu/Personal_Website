@@ -18,20 +18,20 @@ const {
     items && items.length > 0 && (
         <div
             class={twMerge(
-                `grid overflow-clip relative left-10 max-w-[1204px] mx-auto gap-8 md:gap-y-12 ${
+                `grid overflow-clip max-[640px]:justify-center relative left-2 xl:left-14  2xl:left-6 md:left-10 min-[535px]:left-7  max-w-[1300px] mx-auto gap-8 md:gap-y-12 ${
                     columns === 4
-                        ? 'lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2'
+                        ? 'lg:grid-cols-4 md:grid-cols-3 min-[535px]:grid-cols-2'
                         : columns === 3
-                          ? 'lg:grid-cols-3 sm:grid-cols-2'
+                          ? 'lg:grid-cols-3 min-[535px]:grid-cols-2'
                           : columns === 2
-                            ? 'sm:grid-cols-2 '
+                            ? 'min-[535px]:grid-cols-2'
                             : ''
                 }`,
                 containerClass
             )}
         >
             {items.map(({ title, icon, classes: itemClasses = {} }) => (
-                <div class="intersect-once motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade">
+                <div class="intersect-once motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade ">
                     <div class={twMerge('flex flex-row max-w-md gap-8 items-center ', panelClass, itemClasses?.panel)}>
                         <div class="flex justify-center">
                             {icon ? (
