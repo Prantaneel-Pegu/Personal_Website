@@ -18,7 +18,7 @@ const metadata = {
 };
 ---
 
-<Layout metadata={metadata}>
+<Layout metadata={metadata} >
     <Fragment slot="announcement"></Fragment>
     <Fragment slot="header">
         <Header
@@ -94,7 +94,7 @@ const metadata = {
         }}
     >
         <Fragment slot="content">
-            <h2 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">About me</h2>
+            <h2 class="text-3xl font-bold tracking-tight dark:text-white sm:text-4xl mb-4">About me</h2>
             <p>
                 Hi! I'm a developer who loves turning ideas into functional and pleasing digital experiences. I enjoy
                 designing beautiful websites just as much as I appreciate visiting them.
@@ -196,7 +196,7 @@ const metadata = {
     <Content
         id="portfolio"
         title="My Projects"
-        subtitle="These projects are a mix of things I’ve made while learning and exploring. Each one has taught me something new. They’re not perfect, but they’re real and they work. I’ve put a lot of thought and effort into each one."
+        subtitle="These projects are a mix of things I’ve made while learning. They’re not perfect, but they’re real and they work. I’ve put a lot of thought and effort into each one."
         isReversed
         items={[
             {
@@ -204,6 +204,7 @@ const metadata = {
                 description:
                     'Snackhub is a fictional restaurant website developed with WordPress, PHP, JavaScript, and CSS. It features a custom theme, tailored post types, and custom form handling. It was developed with performance in mind and boasts high functionality, clear-cut design and ease of use.',
                 icon: 'tabler:file-description-filled',
+          
             },
             {
                 title: 'Features:',
@@ -225,7 +226,7 @@ const metadata = {
     >
         <Fragment slot="content">
             <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-                Project 1: <br /><span class="text-2xl">Snackhub - Your Premier Food Destination</span>
+                Project 1: <br /><span class="text-2xl">Snackhub</span>
             </h3>
         </Fragment>
 

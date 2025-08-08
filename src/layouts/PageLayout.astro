@@ -9,32 +9,32 @@ import type { MetaData } from '~/types';
 import { getBlogPermalink } from '~/utils/permalinks';
 
 export interface Props {
-  metadata?: MetaData;
+    metadata?: MetaData;
 }
 
 const { metadata } = Astro.props;
 ---
 
 <Layout metadata={metadata}>
-  <slot name="header">
-    <Header
-      {...headerData}
-      isSticky
-      showRssFeed
-      showToggleTheme
-      links={[
-        { text: 'Home', href: '../#' },
-        { text: 'About', href: '../#about' },
-        { text: 'Resume', href: '../#resume' },
-        { text: 'Projects', href: '../#portfolio' },
-        { text: 'Blog', href: getBlogPermalink() },
-      ]}
-    />
-  </slot>
-  <main>
-    <slot />
-  </main>
-  <slot name="footer">
-    <Footer {...footerData} />
-  </slot>
+    <slot name="header">
+        <Header
+            {...headerData}
+            isSticky
+            showRssFeed
+            showToggleTheme
+            links={[
+                { text: 'Home', href: '../#' },
+                { text: 'About', href: '../#about' },
+                { text: 'Resume', href: '../#resume' },
+                { text: 'Projects', href: '../#portfolio' },
+                { text: 'Blog', href: getBlogPermalink() },
+            ]}
+        />
+    </slot>
+    <main>
+        <slot />
+    </main>
+    <slot name="footer">
+        <Footer {...footerData} />
+    </slot>
 </Layout>

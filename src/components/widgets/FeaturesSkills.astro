@@ -175,7 +175,7 @@ const items = [
 <WidgetWrapperSkills
     id={id}
     isDark={isDark}
-    containerClass={`${isBeforeContent ? 'md:pb-8 lg:pb-12' : ''} ${isAfterContent ? 'pt-0 md:pt-0 lg:pt-0' : ''} ${
+    containerClass={`${isBeforeContent ? 'md:pb-8 lg:pb-12' : ''} ${isAfterContent ? 'pt-0 md:pt-0 lg:pt-0' : ''} px-6 ${
         classes?.container ?? ''
     }`}
     bg={bg}
@@ -195,7 +195,7 @@ const items = [
                         <Fragment set:html={image} />
                     ) : (
                         <Image
-                            class="w-full h-80 object-cover rounded-xl mx-auto bg-gray-500 shadow-lg"
+                            class="w-full h-80 object-cover rounded-xl mx-auto bg-gray-500 shadow-lg "
                             width="auto"
                             height={320}
                             widths={[400, 768]}
@@ -213,7 +213,7 @@ const items = [
         columns={columns}
         defaultIcon={defaultIcon}
         classes={{
-            container: 'mt-12',
+            container: 'mt-14',
             panel: 'max-w-full sm:max-w-md',
             title: 'text-lg font-semibold',
             description: 'mt-0.5',
