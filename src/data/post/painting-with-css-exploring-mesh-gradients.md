@@ -20,9 +20,9 @@ Though CSS doesn’t natively support mesh gradients (yet), you can still create
 
 ## Why They Work So Well
 
-There’s a reason mesh gradients have become so popular among modern web designers. Their visual softness and natural flow immediately convey a sense of sophistication and smoothness. They're perfect for hero sections, landing pages, login screens, and anywhere you want to evoke emotion without overwhelming the user. With just the right blend of colors, you can create feelings of warmth, coolness, mystery, or even nostalgia — without using a single image.
+There’s a reason mesh gradients have become so popular among modern web designers. Their visual softness and natural flow immediately convey a sense of sophistication and smoothness. They're perfect for hero sections, landing pages, login screens, and anywhere you want to evoke emotion without overwhelming the user. With just the right blend of colors, you can create feelings of warmth, coolness, mystery, or even nostalgia without using a single image.
 
-Because mesh gradients aren’t tied to symmetry or strict directionality, they feel more organic. That gives them a hand-painted charm that’s hard to achieve with traditional CSS tools. They can make a tech startup feel more human, a portfolio feel more artistic, or a brand feel more premium — simply by what colors you choose and how you layer them.
+Because mesh gradients aren’t tied to symmetry or strict directionality, they feel more organic. That gives them a hand-painted charm that’s hard to achieve with traditional CSS tools. They can make a tech startup feel more human, a portfolio feel more artistic, or a brand feel more premium, simply by what colors you choose and how you layer them.
 
 ## Using Mesh Gradients
 
@@ -32,4 +32,4 @@ Tools like Haikei, MSHR, and even Figma plugins make this process easy. You don�
 
 ## Final Thoughts
 
-Mesh gradients are not just a design trend — they represent a shift in how we think about the web as a medium. No longer just a grid of boxes and buttons, the browser has become a canvas. Give it a shot — even if you're not a "designer," you'll feel like one.
+Mesh gradients are not just a design trend. They represent a shift in how we think about the web as a medium. No longer just a grid of boxes and buttons, the browser has become a canvas. Give them a shot — even if you're not a "designer," you'll feel like one.
