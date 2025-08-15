@@ -6,7 +6,7 @@ import { getPermalink } from '~/utils/permalinks';
 const { inputs, textarea, disclaimer, button = 'Contact Me', description = '' } = Astro.props;
 ---
 
-<form method="POST" id="contact-form" action={getPermalink('/api/contact-form-handler')}>
+<form method="POST" id="contact-form" data-api-url={getPermalink('/api/contact-form-handler')}>
     {
         inputs &&
             inputs.map(
@@ -102,7 +102,7 @@ const { inputs, textarea, disclaimer, button = 'Contact Me', description = '' } 
         const formData = new FormData(form);
 
         try {
-            const res = await fetch(form.action, {
+            const res = await fetch(form.dataset.apiUrl, {
                 method: 'POST',
                 body: formData,
             });

@@ -1,4 +1,4 @@
-import { getPermalink, getBlogPermalink, getAsset, getHomePermalink } from './utils/permalinks';
+import { getPermalink, getBlogPermalink, getAsset } from './utils/permalinks';
 
 export const headerData = {
     links: [
@@ -28,7 +28,7 @@ export const headerData = {
             ],
         },
     ],
-    actions: [{ text: 'Go Back', href: getHomePermalink() }],
+    actions: [{ text: 'Go Back', onclick: 'history.back()' }],
 };
 
 export const footerData = {

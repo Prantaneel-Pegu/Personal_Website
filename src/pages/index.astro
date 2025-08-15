@@ -6,7 +6,7 @@ import Content from '~/components/widgets/Content.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 // import Testimonials from '~/components/widgets/Testimonials.astro';
 import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
-import { getBlogPermalink, getPermalink } from '~/utils/permalinks';
+import { getBlogPermalink, getHomePermalink, getPermalink } from '~/utils/permalinks';
 import MyPhoto from '~/assets/images/my-photo-long.jpg';
 import StepsEmployment from '~/components/widgets/StepsEmployment.astro';
 import FeaturesSkills from '~/components/widgets/FeaturesSkills.astro';
@@ -23,16 +23,16 @@ const metadata = {
     <Fragment slot="header">
         <Header
             links={[
-                { text: 'Home', href: '#' },
-                { text: 'About', href: '#about' },
-                { text: 'Resume', href: '#resume' },
-                { text: 'Projects', href: '#portfolio' },
+                { text: 'Home', href: getHomePermalink() },
+                { text: 'About', href: getHomePermalink().concat('#about') },
+                { text: 'Resume', href: getHomePermalink().concat('#resume') },
+                { text: 'Projects', href: getHomePermalink().concat('#portfolio') },
                 { text: 'Blog', href: getBlogPermalink() },
             ]}
             actions={[
                 {
                     text: 'Contact me',
-                    href: 'contact',
+                    href: getPermalink('contact'),
                 },
             ]}
             isSticky

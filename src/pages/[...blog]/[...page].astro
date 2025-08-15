@@ -8,6 +8,8 @@ import Pagination from '~/components/blog/Pagination.astro';
 // import PostTags from "~/components/blog/Tags.astro";
 
 import { blogListRobots, getStaticPathsBlogList } from '~/utils/blog';
+import Header from '~/components/widgets/Header.astro';
+import { getBlogPermalink, getHomePermalink, getPermalink } from '~/utils/permalinks';
 
 export const prerender = true;
 
@@ -36,6 +38,26 @@ const metadata = {
 ---
 
 <Layout metadata={metadata}>
+    <Fragment slot="header">
+        <Header
+            links={[
+                { text: 'Home', href: getHomePermalink() },
+                { text: 'About', href: getHomePermalink().concat('#about') },
+                { text: 'Resume', href: getHomePermalink().concat('#resume') },
+                { text: 'Projects', href: getHomePermalink().concat('#portfolio') },
+                { text: 'Blog', href: getBlogPermalink() },
+            ]}
+            actions={[
+                {
+                    text: 'Contact me',
+                    href: getPermalink('contact'),
+                },
+            ]}
+            isSticky
+            showRssFeed
+            showToggleTheme
+        />
+    </Fragment>
     <section class="px-6 sm:px-6 py-12 sm:py-16 lg:py-20 mx-auto max-w-4xl">
         <Headline subtitle="Things I’ve typed out so I won’t forget them (again)."> My Blog </Headline>
         <BlogList posts={page.data} />
