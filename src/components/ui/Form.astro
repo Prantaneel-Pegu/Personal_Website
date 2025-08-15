@@ -93,42 +93,41 @@ const { inputs, textarea, disclaimer, button = 'Contact Me', description = '' } 
 </form>
 
 <script type="module">
-    const form = document.getElementById('contact-form');
-    const submitResult = document.getElementById('submit-result');
+    document.addEventListener('DOMContentLoaded', () => {
+        const form = document.getElementById('contact-form');
+        const submitResult = document.getElementById('submit-result');
 
-    form?.addEventListener('submit', async (event) => {
-        event.preventDefault();
+        form?.addEventListener('submit', async (event) => {
+            event.preventDefault();
+            const formData = new FormData(form);
 
-        const formData = new FormData(form);
+            try {
+                const res = await fetch(form.dataset.apiUrl, {
+                    method: 'POST',
+                    body: formData,
+                });
 
-        try {
-            const res = await fetch(form.dataset.apiUrl, {
-                method: 'POST',
-                body: formData,
-            });
+                submitResult.classList.remove('text-green-500', 'text-red-500');
 
-            submitResult.classList.remove('text-green-500', 'text-red-500');
-
-            if (res.ok) {
-                console.log('Form submitted successfully');
+                if (res.ok) {
+                    form.reset();
+                    submitResult.classList.add('text-green-500');
+                    submitResult.innerText = 'Message sent successfully.';
+                    submitResult.style.display = 'block';
+                } else {
+                    form.reset();
+                    submitResult.classList.add('text-red-500');
+                    submitResult.innerText = 'Internal Error. Form submission failed.';
+                    submitResult.style.display = 'block';
+                }
+            } catch (err) {
+                console.error('Error submitting form:', err);
                 form.reset();
-                submitResult.classList.add('text-green-500');
-                submitResult.innerText = 'Message sent successfully.';
-                submitResult.style.display = 'block';
-            } else {
-                console.error('Form submission failed');
-                form.reset();
+                submitResult.classList.remove('text-green-500', 'text-red-500');
                 submitResult.classList.add('text-red-500');
                 submitResult.innerText = 'Internal Error. Form submission failed.';
                 submitResult.style.display = 'block';
             }
-        } catch (err) {
-            console.error('Error submitting form:', err);
-            form.reset();
-            submitResult.classList.remove('text-green-500', 'text-red-500');
-            submitResult.classList.add('text-red-500');
-            submitResult.innerText = 'Internal Error. Form submission failed.';
-            submitResult.style.display = 'block';
-        }
+        });
     });
 </script>
