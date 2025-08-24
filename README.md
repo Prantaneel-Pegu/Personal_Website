@@ -1,6 +1,6 @@
 # Personal Website
 
-This repo hosts the code for my personal website.
+This repo hosts the code for my personal website. You are free to clone this project and use it as a template for your own website.
 
 ## Cloning this project
 
